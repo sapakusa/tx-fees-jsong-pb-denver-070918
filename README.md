@@ -1,5 +1,5 @@
 
-# Transaction Fees [not working]
+# Transaction Fees
 
 The actual input sum - output sum is what we call the transaction fee. This amount goes to the miner and may in some cases be 0. Fees vary depending on other transactions trying to get into the blockchain. A lot of transactions trying to get into the blockchain will generally lead to higher fees and not as many will generally lead to lower fees.
 
@@ -40,6 +40,7 @@ hex_tx = '010000000456919960ac691763688d3d3bcea9ad6ecaf875df5339e148a1fc61c6ed7a
 from tx import Tx
 
 class Tx(Tx):
+
     def fee(self):
         '''Returns the fee of this transaction in satoshi'''
         # initialize input sum and output sum
@@ -62,3 +63,6 @@ h = double_sha256(modified_tx)
 z = int.from_bytes(h, 'big')
 print(hex(z))
 ```
+
+    0x27e0c5994dec7824e56dec6b2fcb342eb7cdb0d0957c2fce9882f715e85d81a6
+
